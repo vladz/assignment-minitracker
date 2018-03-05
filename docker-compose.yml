@@ -1,0 +1,8 @@
+version: '3'
+
+services:
+  minitracker:
+    container_name: minitracker
+    build: .
+    image: vladzzz/tests:minitracker
+    restart: always
