@@ -1,4 +1,4 @@
-FROM python:alpine3.6
+FROM python:slim
 LABEL maintainer='vlad.zverev@gmail.com'
 
 COPY requirements.txt /
