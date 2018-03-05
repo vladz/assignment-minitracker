@@ -6,7 +6,7 @@ import json
 ```
 Добавляем новую машину с начальными координатами (1, 1), получаем её id:
 ```python
-print(requests.post('http://localhost:8765/', data=json.dumps({'lat': 111, 'long': 111})).text)
+print(requests.post('http://localhost:8765/', data=json.dumps({'lat': 1, 'long': 1})).text)
 ```
 Вывод списка всех машин:
 ```python
