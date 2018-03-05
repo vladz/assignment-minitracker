@@ -13,9 +13,8 @@ class GeoPoint(NamedTuple):
 
 
 class Car:
-    last_car_id = 0
-    car_index: Dict[int, object] = {}
-    coords_index: Dict['GeoPoint', object] = {}
+    last_car_id: int = 0
+    car_index: Dict[int, 'Car'] = {}
 
     def __init__(self):
         self.car_id = Car.last_car_id
