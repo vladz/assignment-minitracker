@@ -10,8 +10,13 @@ logger = logging.getLogger(__name__)
 DEFAULT_METHODS = ('GET', 'POST', 'PUT', 'DELETE')
 
 
-def main(port: Union[int, str] = 8765, debug: bool = False) -> None:
+def init(debug: bool = False) -> 'web.Application':
     logger.info('Tracker starting')
-    tracker_app = web.Application(debug=debug)
-    setup_routes(tracker_app)
+    app = web.Application(debug=debug)
+    setup_routes(app)
+    return app
+
+
+def main(port: Union[int, str] = 8765, debug: bool = False) -> None:
+    tracker_app = init(debug)
     web.run_app(tracker_app, port=port)
